@@ -1,0 +1,290 @@
+{
+    /***************************************/
+    /* General VSCode                      */
+    /***************************************/
+
+    /// Disable workspace trust
+    "security.workspace.trust.untrustedFiles": "open",
+    "security.workspace.trust.enabled": false,
+
+    /// Theme
+    "workbench.colorTheme": "Atom One Dark",
+    "workbench.iconTheme": "material-icon-theme",
+
+    /// Editor smallification
+    "window.density.editorTabHeight": "compact",
+    "workbench.layoutControl.enabled": false,
+    "window.commandCenter": false,
+    "editor.minimap.enabled": false,
+    "workbench.activityBar.location": "hidden",
+    "workbench.statusBar.visible": true,
+    "workbench.editor.showTabs": "multiple",
+
+    /// Rainbow bracket highlights!
+    "workbench.colorCustomizations": {
+        "editorBracketHighlight.foreground1": "#5caeef",
+        "editorBracketHighlight.foreground2": "#dfb976",
+        "editorBracketHighlight.foreground3": "#c172d9",
+        "editorBracketHighlight.foreground4": "#4fb1bc",
+        "editorBracketHighlight.foreground5": "#97c26c",
+        "editorBracketHighlight.foreground6": "#d27277",
+        "editorBracketHighlight.unexpectedBracket.foreground": "#b1564b"
+    },
+
+    /// Font
+    "editor.fontFamily": "Menlo, Monaco, 'Courier New', monospace",
+    "editor.fontSize": 12,
+
+    /// Indentation
+    "editor.tabSize": 4,
+    "editor.detectIndentation": false,
+
+    /// Brackets
+    "editor.guides.bracketPairsHorizontal": false,
+    "editor.guides.bracketPairs": true,
+    "editor.guides.highlightActiveIndentation": "always",
+
+    /// Rulers
+    "editor.rulers": [100],
+
+    /// Misc. settings
+    // Sort by file type in explorer.
+    "explorer.sortOrder": "type",
+    // Preview files (don"t remember what this does exactly)
+    "livePreview.notifyOnOpenLooseFile": false,
+    // Disable the disabling of syntax highlighting and stuff for big files.
+    "editor.largeFileOptimizations": false,
+    // Disable selecting over a selection causing a drag action.
+    "editor.dragAndDrop": false,
+
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/Thumbs.db": true,
+        // Exclude Word temp files
+        "**/~$*": true,
+        // Exclude PHP composer lockfile
+        "composer.lock": true
+    },
+
+    /***************************************/
+    /* Terminal settings                   */
+    /***************************************/
+
+    /// Add terminal profiles manually as VSCode is still hung up on fish 3.6.1
+    "terminal.integrated.profiles.osx": {
+        "bash": {
+            "path": "bash",
+            "args": [
+                "-l"
+            ],
+            "icon": "terminal-bash"
+        },
+        "zsh": {
+            "path": "zsh",
+            "args": [
+                "-l"
+            ]
+        },
+        "fish": {
+            "path": "/opt/homebrew/bin/fish",
+            "args": [
+                "-l"
+            ]
+        }
+    },
+
+    "terminal.integrated.defaultProfile.osx": "fish",
+    "debug.internalConsoleOptions": "openOnSessionStart",
+
+    /***************************************/
+    /* Language-specific                   */
+    /***************************************/
+
+    "[javascript]": {
+        "javascript.preferences.importModuleSpecifierEnding": "js",
+        "javascript.preferences.importModuleSpecifier": "non-relative",
+        "javascript.preferences.quoteStyle": "single",
+
+        "editor.suggestSelection": "recentlyUsed",
+
+        "editor.defaultFormatter": "vscode.typescript-language-features",
+        "editor.wordBasedSuggestions": "off",
+    },
+
+    "[typescript]": {
+        "typescript.preferences.quoteStyle": "single",
+        "editor.wordBasedSuggestions": "off",
+    },
+
+    "[css]": {
+        "editor.defaultFormatter": "vscode.css-language-features"
+    },
+
+    "[dart]": {
+
+        "editor.insertSpaces": true,
+        "editor.detectIndentation": false,
+
+        "editor.tabSize": 4,
+
+        "editor.wordBasedSuggestions": "off",
+
+        "editor.suggest.insertMode": "insert",
+        "editor.suggestSelection": "first",
+
+        "editor.selectionHighlight": false,
+
+        "editor.defaultFormatter": "Dart-Code.dart-code",
+        "editor.inlayHints.enabled": "offUnlessPressed"
+    },
+
+    "[markdown]": {
+        "editor.unicodeHighlight.ambiguousCharacters": false,
+        "editor.unicodeHighlight.invisibleCharacters": false,
+        "diffEditor.ignoreTrimWhitespace": false,
+        "editor.wordWrap": "on",
+
+        "editor.wordBasedSuggestions": "off",
+
+        "editor.rulers": [100],
+
+        "editor.quickSuggestions": {
+            "comments": "off",
+            "strings": "off",
+            "other": "off"
+        },
+
+        "editor.tabSize": 2
+    },
+
+    "[yaml]": {
+        "editor.insertSpaces": true,
+        "editor.tabSize": 4,
+        "editor.autoIndent": "advanced",
+        "diffEditor.ignoreTrimWhitespace": false
+    },
+
+    "[html]": {
+        "editor.defaultFormatter": "vscode.html-language-features"
+    },
+
+    "[json]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+
+    "[jsonc]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+
+    "[python]": {
+        "diffEditor.ignoreTrimWhitespace": false,
+        "editor.formatOnType": true,
+        "editor.wordBasedSuggestions": "off",
+    },
+
+    /***************************************/
+    /* Extension settings                  */
+    /***************************************/
+
+    "C_Cpp.default.compilerPath": "/usr/bin/clang++",
+    "php.validate.executablePath": "/opt/homebrew/bin/php",
+
+    /// Python
+    "python.defaultInterpreterPath": "/opt/homebrew/bin/python3",
+    "python.languageServer": "Pylance",
+    "python.analysis.autoImportCompletions": true,
+    "python.analysis.indexing": true,
+    "python.analysis.inlayHints.callArgumentNames": "off",
+    "python.analysis.inlayHints.functionReturnTypes": true,
+    "python.analysis.addImport.heuristics": true,
+
+    /// Git integration
+    "git.autofetch": true,
+    "git.confirmSync": false,
+
+    /// vscode-icons
+    "vsicons.associations.folders": [
+        {
+            "icon": "images",
+            "extensions": [
+                "images",
+                "image",
+                "img",
+                "imgs",
+                "icons",
+                "icon",
+                "ico",
+                "screenshot",
+                "screenshots",
+                "svg",
+                "media"
+            ],
+            "format": "svg",
+        },
+        {
+            "icon": "www",
+            "extensions": [
+                "www",
+                "wwwroot",
+                "htdocs"
+            ],
+            "format": "svg",
+        },
+    ],
+
+    /// Material Icons
+    "material-icon-theme.folders.associations": {
+        "htdocs": "php",
+        "media": "images"
+    },
+
+    "material-icon-theme.hidesExplorerArrows": false,
+    "material-icon-theme.folders.theme": "specific",
+
+    /// Markdown Preview Enhanced
+    "markdown-preview-enhanced.codeBlockTheme": "github.css",
+    "markdown-preview-enhanced.previewTheme": "github-light.css",
+    "markdown-preview-enhanced.breakOnSingleNewLine": false,
+    "markdown-preview-enhanced.usePandocParser": false,
+    "markdown-preview-enhanced.printBackground": false,
+    "markdown-preview-enhanced.chromePath": "/Applications/Chromium.app/Contents/MacOS/Chromium",
+
+    /// Spell checker
+    "cSpell.languageSettings": [
+        /// Spell check only comments.
+        {
+            "languageId": "python",
+            "includeRegExpList": [
+                "/#.*/",
+                "/('''|\"\"\")[^\\1]+?\\1/g"
+            ]
+        },
+        {
+            "languageId": "javascript,typescript,php",
+            "includeRegExpList": [
+               "CStyleComment"
+            ]
+        },
+        {
+            "languageId": "markdown",
+            "ignoreRegExpList": [
+                "/```(?:(?!```)[^])+```/g",
+                "/[^`]`[^`]+`[^`]/g"
+            ]
+        }
+    ],
+    "cSpell.enableFiletypes": [
+        "!jsonc"
+    ],
+    "cSpell.userWords": [
+        "Gantt",
+        "Myki",
+        "phpdoc",
+        "VCAA's"
+    ],
+    "cSpell.language": "en-GB",
+}
