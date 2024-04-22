@@ -186,6 +186,15 @@
         "editor.wordBasedSuggestions": "off",
     },
 
+    "[lua]": {
+        "editor.quickSuggestions": {
+            "comments": "off",
+            "other": "on",
+            "strings": "on"
+        },
+        "editor.semanticHighlighting.enabled": true
+    },
+
     /***************************************/
     /* Extension settings                  */
     /***************************************/
@@ -281,10 +290,14 @@
         "!jsonc"
     ],
     "cSpell.userWords": [
+        "Arduino",
+        "capturable",
         "Gantt",
-        "Myki",
-        "phpdoc",
-        "VCAA's"
+        "neovim",
+        "phpdoc"
     ],
     "cSpell.language": "en-GB",
+    "cmake.configureOnOpen": false,
+    "cmake.showOptionsMovedNotification": false,
+    "extensions.ignoreRecommendations": true,
 }
